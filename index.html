@@ -60,6 +60,15 @@
     }
     
 
+    /* header */
+    .button-section-header{
+      border-radius: 5px;
+      border: white 0.5px solid;
+      color: white;
+      padding: 5px;
+      
+    }
+
     .mp-jumbotron .mp-img-decoration{
       color: white;
       background-color: white;
@@ -125,6 +134,9 @@
     }
 
 
+
+
+
   </style>
 
   <title>Start Bootstrap</title>
@@ -133,17 +145,21 @@
 <body class="bg-dark d-flex flex-column align-items-center fs-5 text"> 
 
   <header class="w-100 d-flex justify-content-center bg-color-header text-white">
-    <div class="row w-75 d-flex justify-content-between align-items-center p-xl-5 py-lg-4 p-lg-0">
+    <div class="row w-100 d-flex justify-content-center align-items-center p-xl-5 py-lg-4 p-lg-0 py-3 ">
 
-      <div class="mp-col-left col-lg-5 d-flex justify-content-start">
+      <div class="mp-col-left col-lg-5 col-9 d-flex justify-content-start">
         <div class="fs-3 text fw-bold">START BOOTSTRAP</div>
       </div>
 
-      <div class="mp-col-right col-xl-5 col-lg-6 d-flex align-items-center justify-content-end">
+      <div class="mp-col-right col-xl-5 col-lg-6 align-items-center justify-content-end d-none d-lg-flex">
         <div class="fs-6 text p-xl-3 p-lg-2">PORTFOLIO</div>
         <div class="fs-6 text p-xl-3 p-lg-2">ABOUT</div>
         <div class="fs-6 text p-xl-3 p-lg-2">CONTACT</div>
 
+      </div>
+
+      <div class="d-block col-1 d-lg-none">
+        <i class="fa-solid fa-bars button-section-header"></i>
       </div>
 
     </div>
@@ -154,9 +170,9 @@
     <div class="mp-img-jumbotron debug_b col-2 p-2 ">    
       <div class="" style="height: 245px;"></div>
     </div>
-    <div class="font-h1">START BOOTSTRAP</div>
+    <div class="fs-1 fw-bold text-center">START BOOTSTRAP</div>
     <div class="mp-img-decoration debug_b col-2 p-2" style="height: 10px;"></div>
-    <div class="mp-text-jumbotron text-center p-2 h4">
+    <div class="mp-text-jumbotron text-center m-2 fs-6">
       GRAPHIC ARTIST - WEB DESIGNER - ILLUSTRATOR
     </div>
 
@@ -164,7 +180,7 @@
 
   <main>
     <section class="portfolio bg-color-white d-flex flex-column justify-content-evenly align-items-center py-5 px-0 " style="height: auto;">
-      <div class="font-h1 m-3 p-2">PORTFOLIO</div>
+      <div class="fs-2 fw-bold m-3 p-2">PORTFOLIO</div>
       <div class="mp-img-decoration debug_b col-2 p-2 m-4" style="height: 10px;"></div>
 
       <div class="container text-center d-flex flex-column align-items-center ">
@@ -173,15 +189,15 @@
         <!-- <div class="row d-flex justify-content-between align-items-center"> -->
           <div class=" w-100 row-cols-xl-4 d-flex justify-content-center  align-items-center flex-wrap">
             
-            <div class="col-xl m-xl-3 col-lg-5 m-lg-2 d-flex justify-content-center align-items-center debug " style="height: 260px">
+            <div class="col-xl m-xl-3 col-lg-5 m-lg-2 col-11 m-3 d-flex justify-content-center align-items-center debug rounded" style="height: 260px">
               <!-- prova ad aggiungere img-fluid per avere un immagine -->
               <div class="rounded-circle debug_b " style="height: 205px; width: 205px;">Immagine</div>
             </div>
-            <div class="col-xl m-xl-3 col-lg-5 m-lg-2 d-flex justify-content-center align-items-center debug " style="height: 260px">
+            <div class="col-xl m-xl-3 col-lg-5 m-lg-2 col-11 m-3 d-flex justify-content-center align-items-center debug rounded" style="height: 260px">
               <!-- prova ad aggiungere img-fluid per avere un immagine -->
               <div class="rounded-circle debug_b " style="height: 205px; width: 205px;">Immagine</div>
             </div>
-            <div class="col-xl m-xl-3 col-lg-5 m-lg-2 d-flex justify-content-center align-items-center debug " style="height: 260px">
+            <div class="col-xl m-xl-3 col-lg-5 m-lg-2 col-11 m-3 d-flex justify-content-center align-items-center debug rounded" style="height: 260px">
               <!-- prova ad aggiungere img-fluid per avere un immagine -->
               <div class="rounded-circle debug_b " style="height: 205px; width: 205px;">Immagine</div>
             </div>
@@ -191,15 +207,15 @@
           
           <div class="row d-flex justify-content-between align-items-center "> -->
 
-            <div class="col-xl m-xl-3 col-lg-5 m-lg-2 d-flex justify-content-center align-items-center debug " style="height: 260px">
+            <div class="col-xl m-xl-3 col-lg-5 m-lg-2 col-11 m-3 d-flex justify-content-center align-items-center debug rounded" style="height: 260px">
               <!-- prova ad aggiungere img-fluid per avere un immagine -->
               <div class="rounded-circle debug_b " style="height: 205px; width: 205px;">Immagine</div>
             </div>
-            <div class="col-xl m-xl-3 col-lg-5 m-lg-2 d-flex justify-content-center align-items-center debug " style="height: 260px">
+            <div class="col-xl m-xl-3 col-lg-5 m-lg-2 col-11 m-3 d-flex justify-content-center align-items-center debug rounded" style="height: 260px">
               <!-- prova ad aggiungere img-fluid per avere un immagine -->
               <div class="rounded-circle debug_b " style="height: 205px; width: 205px;">Immagine</div>
             </div>
-            <div class="col-xl m-xl-3 col-lg-5 m-lg-2 d-flex justify-content-center align-items-center debug " style="height: 260px">
+            <div class="col-xl m-xl-3 col-lg-5 m-lg-2 col-11 m-3 d-flex justify-content-center align-items-center debug rounded" style="height: 260px">
               <!-- prova ad aggiungere img-fluid per avere un immagine -->
               <div class="rounded-circle debug_b " style="height: 205px; width: 205px;">Immagine</div>
             </div>
@@ -215,15 +231,15 @@
       <!-- 490px -->
       
       <div class="container-about w-75 p-5 bg-color-aqua d-flex flex-column justify-content-evenly align-items-center " style="height: auto;">
-        <div class="font-h1 m-3">ABOUT</div>
+        <div class="fs-2 fw-bold m-3">ABOUT</div>
         <div class="mp-img-decoration debug_b col-2 p-2 m-3" style="height: 10px;"></div>
 
-        <div class="row d-flex justify-content-between align-items-start px-5 ">
+        <div class="row d-flex flex-lg-row justify-content-lg-between flex-column justify-content-between align-items-start px-lg-5 ">
 
-          <div class="col mx-2 ">
+          <div class="col mx-lg-2 fw-medium my-2">
             Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy Customization.
           </div>
-          <div class="col mx-2 ">
+          <div class="col mx-lg-2 fw-medium my-2">
             Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!
           </div>
 
@@ -239,7 +255,7 @@
     <section class="contact w-100 bg-color-white d-flex flex-column justify-content-evenly align-items-center ">
       
       <div class="container-contact w-75 px-5 bg-color-white d-flex flex-column justify-content-evenly align-items-center" style="height: 680px;" >
-        <div class="font-h1">CONTACT ME</div>
+        <div class="fs-2 fw-bold">CONTACT ME</div>
         <div class="mp-img-decoration debug_b col-2 p-2" style="height: 10px;"></div>
         
         <div class="container-little-contact w-100 p-lg-5 d-flex flex-column justify-content-center align-items-start">
@@ -277,21 +293,23 @@
 
   </main>
 
-  <footer class="color-white w-100">
-    <section class="footer-top w-100 bg-footer-top d-flex justify-content-center align-items-center" style="height: 230px;">
+  <footer class="color-white w-100 fs-4 ">
+    <section class="footer-top w-100 bg-footer-top d-flex justify-content-center align-items-center py-5" style="height: auto;">
       <div class="row w-75 p-0 d-flex justify-content-between align-items-center fs-5 text">
-        <div class="col-xl-3 col-lg-4 text-center d-flex flex-column justify-content-evenly align-items-center">
+
+        <div class="col-xl-3 col-lg-4 text-center d-flex flex-column justify-content-evenly align-items-center mb-4 p-0">
           <div>LOCATION</div>
-          <div>2215 John Daniel Drive Clark, MO</div>
-          <div>54243</div>
+          <div>2215 John Daniel Drive Clark, MO 54243</div>
         </div>
-        <div class="col-xl-3 col-lg-4 text-center d-flex flex-column justify-content-evenly align-items-center">
+
+        <div class="col-xl-3 col-lg-4 text-center d-flex flex-column justify-content-evenly align-items-center mb-4 p-0">
           <div>AROUND THE WEB</div>
           <div class="socials-icons"><i class="fa-brands fa-facebook-f"></i><i class="fa-brands fa-google"></i><i class="fa-brands fa-twitter"></i><i class="fa-brands fa-linkedin-in"></i></div>
         </div>
-        <div class="col-xl-3 col-lg-4 text-center d-flex flex-column justify-content-evenly align-items-center">
-          <div>ABOUT FREELANCER</div>
-          <div>Freelance is a free to use, open source Bootstrap theme created by <span class="color-aqua">Start Bootstrap</span>.</div>
+
+        <div class="col-xl-3 col-lg-4 text-center d-flex flex-column justify-content-evenly align-items-center mb-4 p-0">
+          <div class="fw-medium">ABOUT FREELANCER</div>
+          <div class="fw-medium">Freelance is a free to use, open source Bootstrap theme created by <span class="color-aqua">Start Bootstrap</span>.</div>
         </div>
 
       </div>
@@ -300,7 +318,7 @@
 
     <section class="footer-bottom w-100 bg-footer-bottom d-flex justify-content-center align-items-center " style="height: 100px;">
       
-      <div class="fs-6 text">
+      <div class="fw-medium" style="font-size: small;">
         Copyright <i class="fa-regular fa-copyright"></i> MikePio Website 2023
       </div>
 
