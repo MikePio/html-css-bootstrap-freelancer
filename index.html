@@ -59,6 +59,19 @@
       color: white;
     }
     
+    .line {
+      height: 2px;
+      /* width: 50px; */
+      /* width: 50vh; */
+      border-radius: 20px;
+      background-color: white;
+      max-width: 115px;
+      min-width: 20px;
+    }
+    
+    .portfolio .line, .contact .line {
+      background-color: #2C3E50;
+    }
 
     /* header */
     .button-section-header{
@@ -79,10 +92,45 @@
       color: #2C3E50;
     }
     
-    .portfolio .mp-img-decoration{
-      color: #2C3E50;
-      background-color: #2C3E50;
+    /* * PROCEDIMENTO PER FAR COMPARIRE L'ICONA */
+    .mp-col-image {
+      position: relative;
+      /* serve per nascondere contenuti che escono dai limiti del contenitore div*/
+      overflow: hidden; 
+    }
 
+    /* L'immagine diventa semi trasparente */
+    .mp-col-image:hover img {
+      opacity: 0.5;
+    }
+
+    /*  Una volta in hover sull'immagine, con ::after si applica il background nero opaco con position absolute*/
+    .mp-col-image:hover::after {
+      content: "";
+      background-color: rgba(20, 179, 179, 0.54);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    /* icona che scompare in hover con display none */
+    .mp-col-image i {
+      display: none;
+      color: white;
+      font-size: 3.5rem;
+    }
+
+    /* icona che compare in hover con display block */
+    .mp-col-image:hover i {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 3;
     }
 
     /* section about */
@@ -114,8 +162,14 @@
       border-radius: 5px;
       padding: 5px;
     }
+    
+    .button-section-contact:hover{
+      background-color: #1abc9cb3;
+      color: white;
+      border: none;
+    }
 
-    .ms-form input, .ms-form textarea{
+    .mp-form input, .mp-form textarea{
       border-left: none;
       border-top: none;
       border-right: none;
@@ -123,18 +177,13 @@
       padding-left: 0;
     }
 
-    .ms-form input::placeholder, 
-    .ms-form textarea::placeholder{
-      color: black;
+    .mp-form input::placeholder, 
+    .mp-form textarea::placeholder{
+      color: #2C3E50;
     }
 
-    .ms-form button{
-      background: #1ABC9C;
-      border: none;
-    }
-
-    .ms-form input:focus,
-    .ms-form textarea:focus{
+    .mp-form input:focus,
+    .mp-form textarea:focus{
       box-shadow: 0 1px 0 0 rgba(13,110,253,.25);
     }
 
@@ -193,8 +242,23 @@
   <div class="mp-jumbotron p-5 w-100 bg-color-aqua text-white d-flex flex-column justify-content-evenly align-items-center" style="height: 580px;">
       <img src="/bootstrap_freelancer/img/avatar.svg" alt="avatar" class="" style="height: 260px;"> 
     <div class="fs-1 fw-bold text-center">START BOOTSTRAP</div>
-    <div class="mp-img-decoration debug_b col-2 p-2" style="height: 10px;"></div>
-    <div class="mp-text-jumbotron text-center m-2 fs-6">
+    <!-- <div class="mp-img-decoration debug_b col-2 p-2" style="height: auto;"></div> -->
+
+    <div class=" row d-flex justify-content-center align-items-center p-0 " style="width: 280px;">
+
+      <div class=" col-5 p-0 text-start d-block">
+        <div class="line"></div>
+      </div>
+      <div class="col-2 p-0 text-center">
+        <i class="fa-solid fa-star p-0 d-block"></i>
+      </div>
+      <div class=" col-5 p-0 text-end d-block">
+        <div class="line"></div>
+      </div>
+
+    </div>
+    
+    <div class=" mp-text-jumbotron text-center m-2 fs-6">
       GRAPHIC ARTIST - WEB DESIGNER - ILLUSTRATOR
     </div>
 
@@ -204,21 +268,39 @@
     <!-- section portfolio -->
     <section class="portfolio bg-color-white d-flex flex-column justify-content-evenly align-items-center py-5 px-0 " style="height: auto;">
       <div class="fs-2 fw-bold m-3 p-2">PORTFOLIO</div>
-      <div class="mp-img-decoration debug_b col-2 p-2 m-4" style="height: 10px;"></div>
+
+    <!-- <div class="mp-img-decoration debug_b col-2 p-2" style="height: auto;"></div> -->
+
+    <div class=" row d-flex justify-content-center align-items-center p-0 " style="width: 280px;">
+
+      <div class=" col-5 p-0 text-start d-block">
+        <div class="line"></div>
+      </div>
+      <div class="col-2 p-0 text-center">
+        <i class="fa-solid fa-star p-0 d-block"></i>
+      </div>
+      <div class=" col-5 p-0 text-end d-block">
+        <div class="line"></div>
+      </div>
+
+    </div>
 
       <div class="container text-center d-flex flex-column align-items-center ">
 
         <!-- * row row-cols-3 = ogni riga row (riga) con 3 col (colonne) MA NON SI PUò UTILIZZARE NESSUN MARGINE LATERALE COME mx, ms, me -->
           <div class=" w-100 row-cols-xl-4 d-flex justify-content-center  align-items-center flex-wrap">
             
-            <div class="col-xl m-xl-3 col-lg-5 m-lg-2 col-11 m-3 d-flex justify-content-center align-items-center rounded" >
-              <img src="/bootstrap_freelancer/img/cabin.png" alt="cabin" class="w-100 rounded"> 
+            <div class="mp-col-image col-xl m-xl-3 col-lg-5 m-lg-2 col-11 m-3 d-flex justify-content-center align-items-center rounded" >
+              <img src="/bootstrap_freelancer/img/cabin.png" alt="cabin" class="w-100 rounded">
+              <i class="fa-solid fa-plus"></i>
             </div>
-            <div class="col-xl m-xl-3 col-lg-5 m-lg-2 col-11 m-3 d-flex justify-content-center align-items-center rounded">
-              <img src="/bootstrap_freelancer/img/cake.png" alt="cake" class="w-100 rounded"> 
+            <div class="mp-col-image col-xl m-xl-3 col-lg-5 m-lg-2 col-11 m-3 d-flex justify-content-center align-items-center rounded">
+              <img src="/bootstrap_freelancer/img/cake.png" alt="cake" class="w-100 rounded">
+              <i class="fa-solid fa-plus"></i>
             </div>
-            <div class="col-xl m-xl-3 col-lg-5 m-lg-2 col-11 m-3 d-flex justify-content-center align-items-center rounded">
-              <img src="/bootstrap_freelancer/img/circus.png" alt="circus" class="w-100 rounded"> 
+            <div class="mp-col-image col-xl m-xl-3 col-lg-5 m-lg-2 col-11 m-3 d-flex justify-content-center align-items-center rounded">
+              <img src="/bootstrap_freelancer/img/circus.png" alt="circus" class="w-100 rounded">
+              <i class="fa-solid fa-plus"></i>
             </div>
 
           <!-- </div>
@@ -226,14 +308,17 @@
           
           <div class="row d-flex justify-content-between align-items-center "> -->
 
-            <div class="col-xl m-xl-3 col-lg-5 m-lg-2 col-11 m-3 d-flex justify-content-center align-items-center rounded">
-              <img src="/bootstrap_freelancer/img/game.png" alt="game" class="w-100 rounded"> 
+            <div class="mp-col-image col-xl m-xl-3 col-lg-5 m-lg-2 col-11 m-3 d-flex justify-content-center align-items-center rounded">
+              <img src="/bootstrap_freelancer/img/game.png" alt="game" class="w-100 rounded">
+              <i class="fa-solid fa-plus"></i>
             </div>
-            <div class="col-xl m-xl-3 col-lg-5 m-lg-2 col-11 m-3 d-flex justify-content-center align-items-center rounded">
-              <img src="/bootstrap_freelancer/img/safe.png" alt="safe" class="w-100 rounded"> 
+            <div class="mp-col-image col-xl m-xl-3 col-lg-5 m-lg-2 col-11 m-3 d-flex justify-content-center align-items-center rounded">
+              <img src="/bootstrap_freelancer/img/safe.png" alt="safe" class="w-100 rounded">
+              <i class="fa-solid fa-plus"></i>
             </div>
-            <div class="col-xl m-xl-3 col-lg-5 m-lg-2 col-11 m-3 d-flex justify-content-center align-items-center rounded">
-              <img src="/bootstrap_freelancer/img/submarine.png" alt="submarine" class="w-100 rounded"> 
+            <div class="mp-col-image col-xl m-xl-3 col-lg-5 m-lg-2 col-11 m-3 d-flex justify-content-center align-items-center rounded">
+              <img src="/bootstrap_freelancer/img/submarine.png" alt="submarine" class="w-100 rounded">
+              <i class="fa-solid fa-plus"></i>
             </div>
 
         </div>
@@ -248,7 +333,20 @@
       
       <div class="container-about w-75 p-5 bg-color-aqua d-flex flex-column justify-content-evenly align-items-center " style="height: auto;">
         <div class="fs-2 fw-bold m-3">ABOUT</div>
-        <div class="mp-img-decoration debug_b col-2 p-2 m-3" style="height: 10px;"></div>
+
+        <div class=" row d-flex justify-content-center align-items-center p-0 " style="width: 280px;">
+
+          <div class=" col-5 p-0 text-start d-block">
+            <div class="line"></div>
+          </div>
+          <div class="col-2 p-0 text-center">
+            <i class="fa-solid fa-star p-0 d-block"></i>
+          </div>
+          <div class=" col-5 p-0 text-end d-block">
+            <div class="line"></div>
+          </div>
+    
+        </div>
 
         <div class="row d-flex flex-lg-row justify-content-lg-between flex-column justify-content-between align-items-start px-lg-5 ">
 
@@ -270,40 +368,53 @@
     <!-- section CONTACT ME -->
     <section class="contact w-100 bg-color-white d-flex flex-column justify-content-evenly align-items-center ">
       
-      <div class="container-contact w-75 px-5 bg-color-white d-flex flex-column justify-content-evenly align-items-center" style="height: 680px;" >
+      <form class="container-contact w-75 px-5 bg-color-white d-flex flex-column justify-content-evenly align-items-center mp-form" style="height: 680px;" action="" >
         <div class="fs-2 fw-bold">CONTACT ME</div>
-        <div class="mp-img-decoration debug_b col-2 p-2" style="height: 10px;"></div>
+
+        <div class=" row d-flex justify-content-center align-items-center p-0 " style="width: 280px;">
+
+          <div class=" col-5 p-0 text-start d-block">
+            <div class="line"></div>
+          </div>
+          <div class="col-2 p-0 text-center">
+            <i class="fa-solid fa-star p-0 d-block"></i>
+          </div>
+          <div class=" col-5 p-0 text-end d-block">
+            <div class="line"></div>
+          </div>
+    
+        </div>
         
+        <div class=" mp-text-jumbotron text-center m-2 fs-6">
+          GRAPHIC ARTIST - WEB DESIGNER - ILLUSTRATOR
+        </div>        
         <div class="container-little-contact w-100 p-lg-5 d-flex flex-column justify-content-center align-items-start">
 
-          <div>
-            Name
+          <div class=" mb-2 w-100">
+            <input type="text" class="form-control w-100 fs-5" id="name" placeholder="Name">
           </div>
-          <hr class="w-100">
-          <div>
-            Email Address
+          <div class=" mb-2 w-100">
+            <input type="email" class="form-control w-100 fs-5" id="email" placeholder="Email Address">
           </div>
-          <hr class="w-100">
-          <div>
-            Phone Number
+          <div class=" mb-2 w-100">
+            <input type="text" class="form-control w-100 fs-5" id="telephone" placeholder="Phone Number">
           </div>
-          <hr class="w-100">
-          <div>
-            Message
-          </div>
-
+<!--           
         </div>
 
         <div class="container-little-contact w-100 p-lg-5 d-flex flex-column justify-content-center align-items-start">
-          
-          <hr class="w-100">
-          <button class="button-section-contact p-2 px-3 ">Send</button>
+-->
+          <div class=" mb-3 w-100">
+            <textarea type="text" class="form-control w-100 fs-5" rows="5" id="textarea" placeholder="Message"></textarea>
+          </div>
+
+          <button type="submit" class="btn button-section-contact p-2 px-3 ">Send</button>
 
         </div>
           
           
           
-      </div>
+      </form>
     
     </section>
 
