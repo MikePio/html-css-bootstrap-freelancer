@@ -98,7 +98,7 @@
       
     }
 
-    /* section about */
+    /* section contact */
     .container-contact{
       color: #2C3E50;
     }
@@ -113,6 +113,29 @@
       border: none;
       border-radius: 5px;
       padding: 5px;
+    }
+
+    .ms-form input, .ms-form textarea{
+      border-left: none;
+      border-top: none;
+      border-right: none;
+      border-radius: 0;
+      padding-left: 0;
+    }
+
+    .ms-form input::placeholder, 
+    .ms-form textarea::placeholder{
+      color: black;
+    }
+
+    .ms-form button{
+      background: #1ABC9C;
+      border: none;
+    }
+
+    .ms-form input:focus,
+    .ms-form textarea:focus{
+      box-shadow: 0 1px 0 0 rgba(13,110,253,.25);
     }
 
     /* footer */
@@ -141,7 +164,7 @@
 
   <title>Start Bootstrap</title>
 </head>
-<!-- ! background provvisorio -->
+<!-- ! background color provvisorio -->
 <body class="bg-dark d-flex flex-column align-items-center fs-5 text"> 
 
   <header class="w-100 d-flex justify-content-center bg-color-header text-white">
@@ -166,10 +189,9 @@
 
   </header>
 
+  <!-- jumbotron -->
   <div class="mp-jumbotron p-5 w-100 bg-color-aqua text-white d-flex flex-column justify-content-evenly align-items-center" style="height: 580px;">
-    <div class="mp-img-jumbotron debug_b col-2 p-2 ">    
-      <div class="" style="height: 245px;"></div>
-    </div>
+      <img src="/bootstrap_freelancer/img/avatar.svg" alt="avatar" class="" style="height: 260px;"> 
     <div class="fs-1 fw-bold text-center">START BOOTSTRAP</div>
     <div class="mp-img-decoration debug_b col-2 p-2" style="height: 10px;"></div>
     <div class="mp-text-jumbotron text-center m-2 fs-6">
@@ -179,27 +201,24 @@
   </div>
 
   <main>
+    <!-- section portfolio -->
     <section class="portfolio bg-color-white d-flex flex-column justify-content-evenly align-items-center py-5 px-0 " style="height: auto;">
       <div class="fs-2 fw-bold m-3 p-2">PORTFOLIO</div>
       <div class="mp-img-decoration debug_b col-2 p-2 m-4" style="height: 10px;"></div>
 
       <div class="container text-center d-flex flex-column align-items-center ">
 
-        <!-- * row row-cols-3 = ogni riga row (riga) con 3 col (colonne) -->
-        <!-- <div class="row d-flex justify-content-between align-items-center"> -->
+        <!-- * row row-cols-3 = ogni riga row (riga) con 3 col (colonne) MA NON SI PUò UTILIZZARE NESSUN MARGINE LATERALE COME mx, ms, me -->
           <div class=" w-100 row-cols-xl-4 d-flex justify-content-center  align-items-center flex-wrap">
             
-            <div class="col-xl m-xl-3 col-lg-5 m-lg-2 col-11 m-3 d-flex justify-content-center align-items-center debug rounded" style="height: 260px">
-              <!-- prova ad aggiungere img-fluid per avere un immagine -->
-              <div class="rounded-circle debug_b " style="height: 205px; width: 205px;">Immagine</div>
+            <div class="col-xl m-xl-3 col-lg-5 m-lg-2 col-11 m-3 d-flex justify-content-center align-items-center rounded" >
+              <img src="/bootstrap_freelancer/img/cabin.png" alt="cabin" class="w-100 rounded"> 
             </div>
-            <div class="col-xl m-xl-3 col-lg-5 m-lg-2 col-11 m-3 d-flex justify-content-center align-items-center debug rounded" style="height: 260px">
-              <!-- prova ad aggiungere img-fluid per avere un immagine -->
-              <div class="rounded-circle debug_b " style="height: 205px; width: 205px;">Immagine</div>
+            <div class="col-xl m-xl-3 col-lg-5 m-lg-2 col-11 m-3 d-flex justify-content-center align-items-center rounded">
+              <img src="/bootstrap_freelancer/img/cake.png" alt="cake" class="w-100 rounded"> 
             </div>
-            <div class="col-xl m-xl-3 col-lg-5 m-lg-2 col-11 m-3 d-flex justify-content-center align-items-center debug rounded" style="height: 260px">
-              <!-- prova ad aggiungere img-fluid per avere un immagine -->
-              <div class="rounded-circle debug_b " style="height: 205px; width: 205px;">Immagine</div>
+            <div class="col-xl m-xl-3 col-lg-5 m-lg-2 col-11 m-3 d-flex justify-content-center align-items-center rounded">
+              <img src="/bootstrap_freelancer/img/circus.png" alt="circus" class="w-100 rounded"> 
             </div>
 
           <!-- </div>
@@ -207,17 +226,14 @@
           
           <div class="row d-flex justify-content-between align-items-center "> -->
 
-            <div class="col-xl m-xl-3 col-lg-5 m-lg-2 col-11 m-3 d-flex justify-content-center align-items-center debug rounded" style="height: 260px">
-              <!-- prova ad aggiungere img-fluid per avere un immagine -->
-              <div class="rounded-circle debug_b " style="height: 205px; width: 205px;">Immagine</div>
+            <div class="col-xl m-xl-3 col-lg-5 m-lg-2 col-11 m-3 d-flex justify-content-center align-items-center rounded">
+              <img src="/bootstrap_freelancer/img/game.png" alt="game" class="w-100 rounded"> 
             </div>
-            <div class="col-xl m-xl-3 col-lg-5 m-lg-2 col-11 m-3 d-flex justify-content-center align-items-center debug rounded" style="height: 260px">
-              <!-- prova ad aggiungere img-fluid per avere un immagine -->
-              <div class="rounded-circle debug_b " style="height: 205px; width: 205px;">Immagine</div>
+            <div class="col-xl m-xl-3 col-lg-5 m-lg-2 col-11 m-3 d-flex justify-content-center align-items-center rounded">
+              <img src="/bootstrap_freelancer/img/safe.png" alt="safe" class="w-100 rounded"> 
             </div>
-            <div class="col-xl m-xl-3 col-lg-5 m-lg-2 col-11 m-3 d-flex justify-content-center align-items-center debug rounded" style="height: 260px">
-              <!-- prova ad aggiungere img-fluid per avere un immagine -->
-              <div class="rounded-circle debug_b " style="height: 205px; width: 205px;">Immagine</div>
+            <div class="col-xl m-xl-3 col-lg-5 m-lg-2 col-11 m-3 d-flex justify-content-center align-items-center rounded">
+              <img src="/bootstrap_freelancer/img/submarine.png" alt="submarine" class="w-100 rounded"> 
             </div>
 
         </div>
